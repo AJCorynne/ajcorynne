@@ -26,129 +26,14 @@
       }
     }
   </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glow {
-      box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.3);
-    }
-
-    /* ============================================================
-       HIGH-SPECIFICITY OVERRIDES FOR EMAIL OCTOPUS
-       Forces the widget into our sleek sci-fi dark neon aesthetic
-       ============================================================ */
-    html body #newsletter .email-octopus-form-wrapper,
-    html body div.email-octopus-form-wrapper {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-
-    html body #newsletter .email-octopus-form,
-    html body form.email-octopus-form {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 0.75rem !important;
-    }
-
-    @media (min-width: 640px) {
-      html body #newsletter .email-octopus-form,
-      html body form.email-octopus-form {
-        flex-direction: row !important;
-        align-items: center !important;
-      }
-      html body #newsletter .email-octopus-form-row {
-        flex: 1 !important;
-        margin: 0 !important;
-      }
-      html body #newsletter .email-octopus-form-row-subscribe {
-        margin: 0 !important;
-      }
-    }
-
-    /* Hide generic labels, titles, and 'powered by' tags */
-    html body #newsletter .email-octopus-form label,
-    html body #newsletter .email-octopus-form h2,
-    html body #newsletter .email-octopus-form p.email-octopus-subtitle,
-    html body #newsletter .email-octopus-rewards {
-      display: none !important;
-    }
-
-    /* Dark Mode Form Input */
-    html body #newsletter input[type="email"],
-    html body #newsletter input[type="text"],
-    html body #newsletter .email-octopus-input {
-      background-color: #130F23 !important;
-      border: 1px solid #2A1F4D !important;
-      color: #FFFFFF !important;
-      border-radius: 0.75rem !important;
-      padding: 0.875rem 1.25rem !important;
-      font-size: 0.875rem !important;
-      font-family: inherit !important;
-      width: 100% !important;
-      outline: none !important;
-      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.4) !important;
-      transition: all 0.2s ease !important;
-    }
-
-    html body #newsletter input[type="email"]:focus,
-    html body #newsletter .email-octopus-input:focus {
-      border-color: #A78BFA !important;
-      box-shadow: 0 0 15px -3px rgba(167, 139, 250, 0.4) !important;
-    }
-
-    /* Glowing Purple Button */
-    html body #newsletter button[type="submit"],
-    html body #newsletter input[type="submit"],
-    html body #newsletter .email-octopus-actions button {
-      background: linear-gradient(135deg, #8B5CF6, #C084FC) !important;
-      color: #FFFFFF !important;
-      font-weight: 700 !important;
-      font-size: 0.875rem !important;
-      font-family: inherit !important;
-      border: none !important;
-      border-radius: 0.75rem !important;
-      padding: 0.875rem 1.5rem !important;
-      cursor: pointer !important;
-      white-space: nowrap !important;
-      width: 100% !important;
-      box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.4) !important;
-      transition: transform 0.15s ease, opacity 0.15s ease !important;
-    }
-
-    @media (min-width: 640px) {
-      html body #newsletter button[type="submit"],
-      html body #newsletter input[type="submit"],
-      html body #newsletter .email-octopus-actions button {
-        width: auto !important;
-      }
-    }
-
-    html body #newsletter button[type="submit"]:hover,
-    html body #newsletter input[type="submit"]:hover {
-      opacity: 0.95 !important;
-      transform: translateY(-1px) !important;
-    }
-
-    /* Status Messages */
-    html body #newsletter .email-octopus-success-message {
-      color: #C084FC !important;
-      font-size: 0.875rem !important;
-      font-weight: 600 !important;
-      margin-top: 0.75rem !important;
-    }
-
-    html body #newsletter .email-octopus-error-message {
-      color: #F87171 !important;
-      font-size: 0.875rem !important;
-      margin-top: 0.75rem !important;
-    }
   </style>
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
@@ -169,22 +54,23 @@
     </div>
   </nav>
 
-  <!-- HERO & NEWSLETTER SECTION (PRIMARY CONVERSION) -->
+  <!-- HERO & NEWSLETTER SECTION -->
   <section id="newsletter" class="pt-32 pb-20 px-6 relative overflow-hidden">
+    <!-- Background Ambient Glow -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/15 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
       
-      <!-- Free Book Cover Placeholder -->
+      <!-- Free Book Cover -->
       <div class="md:col-span-5 flex justify-center">
         <div class="relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
-          <!-- Replace placeholder image with Taliah's Poem cover -->
+          <!-- EDIT HERE: Replace placeholder image with your real Taliah's Poem cover -->
           <img src="https://placehold.co/600x900/161129/C084FC?text=Taliah's+Poem\nCover" alt="Taliah's Poem Free Book" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
         </div>
       </div>
 
-      <!-- Copy & Embedded Newsletter Form -->
+      <!-- Copy & EmailOctopus Embed -->
       <div class="md:col-span-7 text-center md:text-left">
         <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
           Free Sci-Fi Romance Novella
@@ -193,12 +79,13 @@
           Claim Your Free Copy of <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">Taliah’s Poem</span>
         </h1>
         <p class="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">
+          <!-- EDIT HERE: Novella blurb -->
           Enter deep space where romance and survival collide. Join the inner circle to download your complimentary book and get exclusive series dispatches.
         </p>
 
-        <!-- OFFICIAL EMAIL OCTOPUS SCRIPT (STYLED VIA CSS) -->
+        <!-- EMAIL OCTOPUS FORM -->
         <div class="max-w-md mx-auto md:mx-0">
-          <script async src="https://eocampaign1.com/form/414f02ee-8880-11f1-a7ac-bd9fb57a3548.js" data-form="414f02ee-8880-11f1-a7ac-bd9fb57a3548"></script>
+          <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
         </div>
 
       </div>
@@ -276,7 +163,7 @@
       </div>
 
       <div class="space-y-4">
-        <!-- Step 0 (Prequel) -->
+        <!-- Prequel -->
         <div class="bg-brand-card/60 border border-brand-purple/40 rounded-xl p-5 flex items-center gap-4">
           <span class="w-8 h-8 rounded-full bg-brand-purple/20 text-brand-neon flex items-center justify-center font-bold text-sm">0</span>
           <div class="flex-1">
@@ -286,7 +173,7 @@
           <a href="#newsletter" class="text-xs text-brand-neon font-bold hover:underline">Get Free</a>
         </div>
 
-        <!-- Step 1 -->
+        <!-- Book 1 -->
         <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
           <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">1</span>
           <div class="flex-1">
@@ -296,7 +183,7 @@
           <a href="#" class="text-xs text-slate-400 hover:text-white font-bold">Amazon</a>
         </div>
 
-        <!-- Step 2 -->
+        <!-- Book 2 -->
         <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
           <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">2</span>
           <div class="flex-1">
@@ -306,7 +193,7 @@
           <a href="#" class="text-xs text-slate-400 hover:text-white font-bold">Amazon</a>
         </div>
 
-        <!-- Step 3 -->
+        <!-- Book 3 -->
         <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
           <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">3</span>
           <div class="flex-1">
@@ -319,7 +206,7 @@
     </div>
   </section>
 
-  <!-- SERIES UPDATES -->
+  <!-- SERIES DISPATCH / UPDATES -->
   <section id="updates" class="py-16 px-6 border-t border-brand-border/40 bg-brand-card/20">
     <div class="max-w-3xl mx-auto text-center">
       <span class="text-xs uppercase font-bold tracking-widest text-brand-neon">Current Status</span>
@@ -330,21 +217,24 @@
           <span>AUTUMN 2025</span>
         </div>
         <p class="text-slate-300 text-sm leading-relaxed">
+          <!-- EDIT HERE: Series status text -->
           Drafting on the upcoming spin-off series is currently underway. Newsletter subscribers will receive the first chapter preview and cover reveal next month!
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT & CONTACT -->
+  <!-- ABOUT THE AUTHOR & CONTACT -->
   <section id="about" class="py-20 px-6 border-t border-brand-border/40">
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
       <div class="flex justify-center">
+        <!-- EDIT HERE: Replace author headshot -->
         <img src="https://placehold.co/400x400/161129/C084FC?text=Author+Photo" alt="Author" class="w-48 h-48 rounded-full object-cover border-2 border-brand-purple/40 shadow-xl">
       </div>
       <div class="md:col-span-2 text-center md:text-left">
         <h2 class="text-2xl font-bold text-white mb-3">About the Author</h2>
         <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          <!-- EDIT HERE: Author bio -->
           AJ Corynne writes character-driven science fiction romance packed with atmospheric worlds, high stakes, and slow-burn chemistry. When not writing among the stars, they can be found stargazing or drinking excessive amounts of tea.
         </p>
         <div>
