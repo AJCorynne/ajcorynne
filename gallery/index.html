@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="robots" content="noindex, nofollow">
   
-  <title>The Art Vault | AJ Corynne</title>
+  <title>Art Gallery | AJ Corynne</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -38,124 +38,94 @@
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-
-    /* ============================================================
-       TOP BANNER FORM OVERRIDES (CLEAN & VISIBLE)
-       ============================================================ */
-    aside .email-octopus-form-wrapper {
-      background: transparent !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      width: auto !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
-    aside .email-octopus-form {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      gap: 8px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    aside .email-octopus-form-row,
-    aside .email-octopus-form-row-subscribe {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    aside input[type="email"],
-    aside input[type="text"],
-    aside .email-octopus-input {
-      height: 38px !important;
-      padding: 6px 12px !important;
-      font-size: 0.875rem !important;
-      background-color: #130F23 !important;
-      border: 1px solid #2A1F4D !important;
-      border-radius: 8px !important;
-      color: #FFFFFF !important;
-      min-width: 170px !important;
-      outline: none !important;
-    }
-    aside input[type="email"]:focus {
-      border-color: #A78BFA !important;
-      box-shadow: 0 0 12px -2px rgba(167, 139, 250, 0.4) !important;
-    }
-    aside button[type="submit"],
-    aside input[type="submit"],
-    aside .email-octopus-actions button {
-      height: 38px !important;
-      padding: 0 16px !important;
-      font-size: 0.875rem !important;
-      font-weight: 700 !important;
-      background: linear-gradient(135deg, #8B5CF6, #C084FC) !important;
-      color: #FFFFFF !important;
-      border-radius: 8px !important;
-      border: none !important;
-      cursor: pointer !important;
-      white-space: nowrap !important;
-      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
-      transition: opacity 0.15s ease;
-    }
-    aside button[type="submit"]:hover {
-      opacity: 0.95 !important;
-    }
-    aside .email-octopus-rewards,
-    aside .email-octopus-form-wrapper h2,
-    aside .email-octopus-form-wrapper p.email-octopus-subtitle,
-    aside .email-octopus-form label {
-      display: none !important;
-    }
   </style>
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-
-  
-  <!-- PERSISTENT TOP BANNER -->
-  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/40 shadow-lg px-4 py-2.5">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+  <!-- ULTRA-THIN CLICK-THROUGH TOP BANNER -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-4 py-2 flex items-center justify-between">
+    <div class="max-w-6xl w-full mx-auto flex items-center justify-between gap-3">
       
-      <!-- Larger, Prominent Hook Text -->
-      <div class="flex items-center gap-2 text-sm sm:text-base text-slate-200">
-        <span class="font-bold text-white whitespace-nowrap">Get Your Free Book:</span>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent font-extrabold italic">Taliah’s Poem</span>
+      <!-- Enticing Hook Text -->
+      <div class="flex items-center gap-2 text-xs sm:text-sm">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2 py-0.5 rounded-full hidden sm:inline-block">
+          Reader Exclusive
+        </span>
+        <span class="text-slate-300 font-medium truncate">
+          Craving the forbidden romance across the stars?
+        </span>
       </div>
 
-      <!-- Single-Line Form Embed -->
-      <div class="flex items-center">
-        <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
-      </div>
+      <!-- Glowing Jump Button -->
+      <a href="#newsletter" class="bg-gradient-to-r from-brand-purple to-brand-accent hover:opacity-90 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition shadow-md shadow-brand-purple/30 flex items-center gap-1">
+        <span>Get Free Book</span>
+        <span class="text-[11px]">&darr;</span>
+      </a>
 
     </div>
   </aside>
 
-
-  
-  <!-- MAIN GALLERY HEADER (With room for top banner) -->
-  <header class="pt-24 pb-8 px-6 text-center border-b border-brand-border/40 relative">
+  <!-- MAIN GALLERY HEADER -->
+  <header class="pt-20 pb-8 px-6 text-center border-b border-brand-border/40 relative">
     <div class="max-w-3xl mx-auto">
       <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1 rounded-full inline-block mb-2">
         Reader Archive
       </span>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">ART GALLERY</h1>
-      <p class="text-slate-400 text-xs md:text-sm mt-2 max-w-lg mx-auto">
-        Full-color, high-resolution illustrations and concept art. <br />Click any image to expand.
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Art Gallery</h1>
+      <p class="text-slate-400 text-xs md:text-sm mt-2 max-w-lg mx-auto leading-relaxed">
+        Full-color, high-resolution original illustrations and concept art.<br />
+        Click any image to expand.
       </p>
     </div>
   </header>
 
-
-  
   <!-- GALLERY SECTIONS CONTAINER -->
-  <main class="max-w-6xl mx-auto px-6 py-8">
+  <main class="max-w-6xl mx-auto px-6 py-10">
     <!-- Loading State -->
     <div id="loading" class="text-center py-16 text-slate-500 text-sm">
       Decrypting archive transmissions...
     </div>
 
     <!-- The Grouped Gallery Container -->
-    <div id="gallery-container" class="space-y-12 hidden"></div>
+    <div id="gallery-container" class="space-y-14 hidden"></div>
   </main>
+
+  <!-- FULL SPACIOUS FEATURE AD / NEWSLETTER SECTION AT THE BOTTOM -->
+  <section id="newsletter" class="py-20 px-6 border-t border-brand-border/60 bg-brand-card/30 relative overflow-hidden">
+    <!-- Background Ambient Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-purple/15 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <!-- Free Book Cover -->
+      <div class="md:col-span-5 flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+          <!-- EDIT HERE: Point to your Taliah's Poem cover when ready -->
+          <img src="https://placehold.co/600x900/161129/C084FC?text=Taliah's+Poem\nCover" alt="Taliah's Poem Free Book" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
+        </div>
+      </div>
+
+      <!-- Pitch Copy & EmailOctopus Embed -->
+      <div class="md:col-span-7 text-center md:text-left">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Complimentary Sci-Fi Romance Novella
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          Claim Your Free Copy of <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">Taliah’s Poem</span>
+        </h2>
+        <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
+          Stranded across enemy lines in the deepest reaches of uncharted space. An alliance formed in secrecy—and a dangerous attraction that could destroy both their worlds. Enter the saga now.
+        </p>
+
+        <!-- EmailOctopus Form (Spacious container) -->
+        <div class="max-w-md mx-auto md:mx-0">
+          <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- LIGHTBOX MODAL (FULL-SCREEN VIEWER) -->
   <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-4 backdrop-blur-md select-none">
@@ -251,7 +221,7 @@
         renderGroupedGallery(parsedItems);
       } catch (err) {
         document.getElementById('loading').innerHTML = `
-          <p class="text-slate-400">Vault currently offline or loading. Please check back shortly.</p>
+          <p class="text-slate-400">Archive currently offline or loading. Please check back shortly.</p>
         `;
       }
     }
@@ -264,7 +234,7 @@
       container.classList.remove('hidden');
 
       if (items.length === 0) {
-        container.innerHTML = '<p class="text-center text-slate-500 py-12">No artwork uploaded to the vault yet.</p>';
+        container.innerHTML = '<p class="text-center text-slate-500 py-12">No artwork uploaded to the gallery yet.</p>';
         return;
       }
 
