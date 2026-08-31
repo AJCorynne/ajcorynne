@@ -42,9 +42,7 @@
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-
-
-<!-- ULTRA-THIN TOP BANNER (GRID-ALIGNED EDGES & CENTERED TEXT) -->
+  <!-- ULTRA-THIN TOP BANNER (GRID-ALIGNED EDGES & CENTERED TEXT) -->
   <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md py-2">
     <div class="max-w-6xl mx-auto px-6 w-full relative flex items-center justify-between min-h-[32px]">
       
@@ -73,13 +71,11 @@
     </div>
   </aside>
 
-  
-
-  <!-- MAIN GALLERY HEADER -->
-  <header class="pt-20 pb-8 px-6 text-center border-b border-brand-border/40 relative">
+  <!-- MAIN GALLERY HEADER (No Border Line, Generous Spacing) -->
+  <header class="pt-28 pb-16 px-6 text-center relative">
     <div class="max-w-3xl mx-auto">
       <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Art Gallery</h1>
-      <p class="text-slate-400 text-xs md:text-sm mt-2 max-w-lg mx-auto leading-relaxed">
+      <p class="text-slate-400 text-xs md:text-sm mt-3 max-w-lg mx-auto leading-relaxed">
         Full-color, high-resolution original illustrations and concept art.<br />
         Click any image to expand.
       </p>
@@ -87,7 +83,7 @@
   </header>
 
   <!-- GALLERY SECTIONS CONTAINER -->
-  <main class="max-w-6xl mx-auto px-6 py-10">
+  <main class="max-w-6xl mx-auto px-6 pb-12">
     <!-- Loading State -->
     <div id="loading" class="text-center py-16 text-slate-500 text-sm">
       Decrypting archive transmissions...
@@ -288,7 +284,7 @@
       updateLightbox();
     }
 
-    // Keyboard navigation (ESC to close, Left/Right arrows to flip)
+    // Keyboard navigation (ESC, Left, Right)
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (!lightbox.classList.contains('hidden')) {
