@@ -1,1 +1,386 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- FAVICON & SEARCH ENGINE EXCLUSION -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <title>The Art Vault | AJ Corynne</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#09070F',
+              card: '#130F23',
+              border: '#2A1F4D',
+              purple: '#8B5CF6',
+              neon: '#A78BFA',
+              accent: '#C084FC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    /* ============================================================
+       SLIM HORIZONTAL TOP BAR OVERRIDES FOR EMAIL OCTOPUS
+       Forces badge, input, and button onto one single compact line
+       ============================================================ */
+    aside .email-octopus-form-wrapper {
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: auto !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    aside .email-octopus-form {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      gap: 0.5rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    aside .email-octopus-form-row {
+      margin: 0 !important;
+      padding: 0 !important;
+      flex: 1 !important;
+    }
+
+    aside .email-octopus-form-row-subscribe {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Compact Input */
+    aside input[type="email"],
+    aside input[type="text"],
+    aside .email-octopus-input {
+      background-color: #130F23 !important;
+      border: 1px solid #2A1F4D !important;
+      color: #FFFFFF !important;
+      border-radius: 0.5rem !important;
+      padding: 0.35rem 0.75rem !important;
+      font-size: 0.8rem !important;
+      height: 34px !important;
+      min-width: 170px !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    aside input[type="email"]:focus {
+      border-color: #A78BFA !important;
+    }
+
+    /* Compact Button */
+    aside button[type="submit"],
+    aside input[type="submit"],
+    aside .email-octopus-actions button {
+      background: linear-gradient(135deg, #8B5CF6, #C084FC) !important;
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      height: 34px !important;
+      padding: 0 0.85rem !important;
+      border-radius: 0.5rem !important;
+      border: none !important;
+      cursor: pointer !important;
+      white-space: nowrap !important;
+    }
+
+    /* Move 'Powered by' inline to the left of the input */
+    aside .email-octopus-rewards {
+      margin: 0 !important;
+      padding: 0 0.35rem 0 0 !important;
+      font-size: 0.65rem !important;
+      color: #64748b !important;
+      white-space: nowrap !important;
+      order: -1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+
+    aside .email-octopus-rewards a {
+      color: #94a3b8 !important;
+      text-decoration: none !important;
+    }
+
+    aside .email-octopus-rewards a:hover {
+      color: #A78BFA !important;
+    }
+
+    /* Hide any leftover titles/subtitles inside widget */
+    aside .email-octopus-form-wrapper h2,
+    aside .email-octopus-form-wrapper p.email-octopus-subtitle,
+    aside .email-octopus-form label {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
+
+  <!-- ULTRA-SLIM PERSISTENT TOP BANNER -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-4 py-1.5">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      
+      <!-- Compact Hook Text -->
+      <div class="flex items-center gap-2 text-xs md:text-sm text-slate-300">
+        <span class="font-bold text-white whitespace-nowrap">Free Novella:</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent font-semibold italic truncate">Taliah’s Poem</span>
+      </div>
+
+      <!-- Single-Line EmailOctopus Embed -->
+      <div class="w-full md:w-auto flex items-center justify-center md:justify-end">
+        <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- MAIN GALLERY HEADER (Tight Top Offset) -->
+  <header class="pt-16 pb-6 px-6 text-center border-b border-brand-border/40 relative">
+    <div class="max-w-3xl mx-auto">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3 py-0.5 rounded-full inline-block mb-2">
+        Reader Archive
+      </span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">The Art Vault</h1>
+      <p class="text-slate-400 text-xs md:text-sm mt-1.5 max-w-lg mx-auto">
+        Full-color, high-resolution original illustrations and concept art. Click any image to expand.
+      </p>
+    </div>
+  </header>
+
+  <!-- GALLERY SECTIONS CONTAINER -->
+  <main class="max-w-6xl mx-auto px-6 py-8">
+    <!-- Loading State -->
+    <div id="loading" class="text-center py-16 text-slate-500 text-sm">
+      Decrypting archive transmissions...
+    </div>
+
+    <!-- The Grouped Gallery Container -->
+    <div id="gallery-container" class="space-y-12 hidden"></div>
+  </main>
+
+  <!-- LIGHTBOX MODAL (FULL-SCREEN VIEWER) -->
+  <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-4 backdrop-blur-md select-none">
+    
+    <!-- Top Controls -->
+    <div class="absolute top-4 right-6 flex gap-4 text-white z-50">
+      <button onclick="closeLightbox()" class="text-slate-400 hover:text-white text-2xl font-bold p-2 cursor-pointer transition">&times; Close</button>
+    </div>
+
+    <!-- Nav Arrows -->
+    <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-4 text-3xl font-bold z-50 cursor-pointer transition">&#10094;</button>
+    <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white p-4 text-3xl font-bold z-50 cursor-pointer transition">&#10095;</button>
+
+    <!-- Main Image & Metadata Display -->
+    <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[70vh] max-w-full rounded-lg shadow-2xl object-contain border border-brand-border/40">
+      
+      <div class="text-center mt-4">
+        <div id="lightbox-badge" class="inline-block text-[11px] font-bold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2.5 py-0.5 rounded-full mb-1"></div>
+        <h3 id="lightbox-title" class="text-white font-bold text-lg"></h3>
+        <p id="lightbox-caption" class="text-slate-400 text-xs mt-1 max-w-xl"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTO-LOADER, BOOK GROUPER & LIGHTBOX SCRIPT -->
+  <script>
+    const GITHUB_USER = 'AJCorynne';
+    const GITHUB_REPO = 'ajcorynne';
+    const GALLERY_FOLDER = 'images/gallery';
+
+    const BOOK_TITLES = {
+      1: "GOD OF SKIES",
+      2: "NEBULA BOUND",
+      3: "ORBIT'S END"
+    };
+
+    let flatGalleryItems = [];
+    let currentIndex = 0;
+
+    async function loadGallery() {
+      try {
+        const response = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GALLERY_FOLDER}`);
+        
+        if (!response.ok) throw new Error("Vault offline");
+        
+        const files = await response.json();
+        const validExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
+        
+        const images = files.filter(file => 
+          validExtensions.some(ext => file.name.toLowerCase().endsWith(ext))
+        );
+
+        const parsedItems = images.map(file => {
+          const nameWithoutExt = file.name.replace(/\.[^/.]+$/, "");
+          const parts = nameWithoutExt.split('_');
+
+          const bookNum = parseInt(parts[0], 10) || 0;
+          const chapterNum = parseInt(parts[1], 10) || 0;
+          const rawTitle = parts[2] || parts[0];
+          const caption = parts[3] || "";
+
+          const title = rawTitle.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+          let badgeText = "";
+          if (bookNum > 0 && chapterNum > 0) {
+            badgeText = `Book ${bookNum} • Chapter ${chapterNum}`;
+          } else if (bookNum > 0) {
+            badgeText = `Book ${bookNum}`;
+          } else if (chapterNum > 0) {
+            badgeText = `Chapter ${chapterNum}`;
+          } else {
+            badgeText = "Bonus Art";
+          }
+
+          return {
+            src: '/' + file.path,
+            bookNum: bookNum,
+            chapterNum: chapterNum,
+            title: title,
+            caption: caption,
+            badge: badgeText
+          };
+        });
+
+        // Numeric Sort: Books first, then Chapters
+        parsedItems.sort((a, b) => {
+          if (a.bookNum !== b.bookNum) return a.bookNum - b.bookNum;
+          return a.chapterNum - b.chapterNum;
+        });
+
+        flatGalleryItems = parsedItems;
+        renderGroupedGallery(parsedItems);
+      } catch (err) {
+        document.getElementById('loading').innerHTML = `
+          <p class="text-slate-400">Vault currently offline or loading. Please check back shortly.</p>
+        `;
+      }
+    }
+
+    function renderGroupedGallery(items) {
+      const container = document.getElementById('gallery-container');
+      const loader = document.getElementById('loading');
+
+      loader.classList.add('hidden');
+      container.classList.remove('hidden');
+
+      if (items.length === 0) {
+        container.innerHTML = '<p class="text-center text-slate-500 py-12">No artwork uploaded to the vault yet.</p>';
+        return;
+      }
+
+      const groups = {};
+      items.forEach(item => {
+        if (!groups[item.bookNum]) groups[item.bookNum] = [];
+        groups[item.bookNum].push(item);
+      });
+
+      let html = '';
+
+      Object.keys(groups).forEach(bookKey => {
+        const bNum = parseInt(bookKey, 10);
+        const bookTitle = BOOK_TITLES[bNum] || (bNum > 0 ? `Book ${bNum}` : "Bonus Art & Maps");
+        const headingText = bNum > 0 ? `Book ${bNum}: ${bookTitle}` : bookTitle;
+
+        html += `
+          <section class="book-section">
+            <div class="flex items-center gap-4 mb-6 border-b border-brand-border/60 pb-3">
+              <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                ${headingText}
+              </h2>
+              <span class="text-xs font-semibold text-brand-neon uppercase tracking-wider bg-brand-purple/10 border border-brand-purple/30 px-2.5 py-1 rounded-full">
+                ${groups[bNum].length} Illustrations
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              ${groups[bNum].map(item => {
+                const globalIndex = flatGalleryItems.indexOf(item);
+                return `
+                  <div class="group relative cursor-pointer overflow-hidden rounded-xl bg-brand-card border border-brand-border/60 hover:border-brand-neon transition" onclick="openLightbox(${globalIndex})">
+                    <img src="${item.src}" alt="${item.title}" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-3 bg-brand-card/90">
+                      <span class="text-[10px] font-bold text-brand-neon tracking-wider uppercase block mb-0.5">${item.badge}</span>
+                      <h3 class="text-xs font-bold text-white truncate">${item.title}</h3>
+                      ${item.caption ? `<p class="text-[11px] text-slate-400 truncate mt-0.5">${item.caption}</p>` : ''}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </section>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateLightbox() {
+      const item = flatGalleryItems[currentIndex];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-badge').textContent = item.badge;
+      document.getElementById('lightbox-title').textContent = item.title;
+      document.getElementById('lightbox-caption').textContent = item.caption;
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % flatGalleryItems.length;
+      updateLightbox();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + flatGalleryItems.length) % flatGalleryItems.length;
+      updateLightbox();
+    }
+
+    // Keyboard navigation (ESC to close, Left/Right arrows to flip)
+    document.addEventListener('keydown', (e) => {
+      const lightbox = document.getElementById('lightbox');
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+      }
+    });
+
+    loadGallery();
+  </script>
+</body>
+</html>
