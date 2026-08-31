@@ -42,41 +42,45 @@
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-  <!-- PERSISTENT TOP EMAIL SIGN-UP BANNER -->
-  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/40 shadow-2xl shadow-brand-purple/10 px-4 py-3">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+
+
+  
+<!-- SLIM PERSISTENT TOP BANNER -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-4 py-2">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
       
-      <!-- Banner Hook -->
-      <div class="text-center md:text-left">
-        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2 py-0.5 rounded-full inline-block mb-1">
-          Exclusive Free Novella
-        </span>
-        <p class="text-xs md:text-sm font-semibold text-white">
-          Get <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">Taliah’s Poem</span> delivered to your inbox:
-        </p>
+      <!-- Compact Hook Text -->
+      <div class="flex items-center gap-2 text-xs md:text-sm text-slate-300">
+        <span class="font-bold text-white whitespace-nowrap">Free Novella:</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent font-semibold italic">Taliah’s Poem</span>
       </div>
 
-      <!-- EmailOctopus Form Widget -->
-      <div class="w-full md:w-auto min-w-[280px] max-w-md">
+      <!-- Compact EmailOctopus Form -->
+      <div class="w-full sm:w-auto min-w-[260px] max-w-sm">
         <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
       </div>
 
     </div>
   </aside>
 
-  <!-- MAIN GALLERY HEADER (With top padding to clear sticky banner) -->
-  <header class="pt-36 pb-12 px-6 text-center border-b border-brand-border/40 relative">
+  <!-- MAIN GALLERY HEADER (Compact Top Padding) -->
+  <header class="pt-24 pb-8 px-6 text-center border-b border-brand-border/40 relative">
     <div class="max-w-3xl mx-auto">
-      <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1 rounded-full inline-block mb-3">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1 rounded-full inline-block mb-2">
         Reader Archive
       </span>
-      <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">The Art Vault</h1>
-      <p class="text-slate-400 text-sm md:text-base mt-3 max-w-xl mx-auto">
-        Full-color, high-resolution original illustrations and concept art. Click any image to view in full resolution.
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">The Art Vault</h1>
+      <p class="text-slate-400 text-xs md:text-sm mt-2 max-w-lg mx-auto">
+        Full-color, high-resolution original illustrations and concept art. Click any image to expand.
       </p>
     </div>
   </header>
 
+
+
+
+
+  
   <!-- GALLERY SECTIONS CONTAINER -->
   <main class="max-w-6xl mx-auto px-6 py-12">
     <!-- Loading State -->
