@@ -42,35 +42,42 @@
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-  <!-- ULTRA-THIN CLICK-THROUGH TOP BANNER -->
-  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-4 py-2 flex items-center justify-between">
-    <div class="max-w-6xl w-full mx-auto flex items-center justify-between gap-3">
+
+
+<!-- ULTRA-THIN TOP BANNER (GRID-ALIGNED EDGES & CENTERED TEXT) -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md py-2">
+    <div class="max-w-6xl mx-auto px-6 w-full relative flex items-center justify-between min-h-[32px]">
       
-      <!-- Enticing Hook Text -->
-      <div class="flex items-center gap-2 text-xs sm:text-sm">
-        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2 py-0.5 rounded-full hidden sm:inline-block">
+      <!-- Left Edge: Aligned with first gallery thumbnail column -->
+      <div class="flex items-center shrink-0">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2.5 py-0.5 rounded-full whitespace-nowrap hidden sm:inline-block">
           Reader Exclusive
-        </span>
-        <span class="text-slate-300 font-medium truncate">
-          Craving the forbidden romance across the stars?
         </span>
       </div>
 
-      <!-- Glowing Jump Button -->
-      <a href="#newsletter" class="bg-gradient-to-r from-brand-purple to-brand-accent hover:opacity-90 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition shadow-md shadow-brand-purple/30 flex items-center gap-1">
-        <span>Get Free Book</span>
-        <span class="text-[11px]">&darr;</span>
-      </a>
+      <!-- Center: True Viewport Centering -->
+      <div class="sm:absolute sm:left-1/2 sm:-translate-x-1/2 text-center px-2 flex-1 sm:flex-none">
+        <p class="text-xs sm:text-sm text-slate-200 font-medium truncate">
+          Craving the forbidden romance across the stars?
+        </p>
+      </div>
+
+      <!-- Right Edge: Aligned with last gallery thumbnail column -->
+      <div class="flex items-center shrink-0">
+        <a href="#newsletter" class="bg-gradient-to-r from-brand-purple to-brand-accent hover:opacity-90 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition shadow-md shadow-brand-purple/30 flex items-center gap-1">
+          <span>Get Free Book</span>
+          <span class="text-[11px]">&darr;</span>
+        </a>
+      </div>
 
     </div>
   </aside>
 
+  
+
   <!-- MAIN GALLERY HEADER -->
   <header class="pt-20 pb-8 px-6 text-center border-b border-brand-border/40 relative">
     <div class="max-w-3xl mx-auto">
-      <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1 rounded-full inline-block mb-2">
-        Reader Archive
-      </span>
       <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Art Gallery</h1>
       <p class="text-slate-400 text-xs md:text-sm mt-2 max-w-lg mx-auto leading-relaxed">
         Full-color, high-resolution original illustrations and concept art.<br />
@@ -90,12 +97,9 @@
     <div id="gallery-container" class="space-y-14 hidden"></div>
   </main>
 
-  <!-- FULL SPACIOUS FEATURE AD / NEWSLETTER SECTION AT THE BOTTOM --> /  <!-- SHARED LEAD MAGNET SECTION -->
+  <!-- SHARED LEAD MAGNET SECTION (PULLED FROM /newsletter/leadmagnet.js) -->
   <div id="newsletter-ad-slot"></div>
   <script src="/newsletter/leadmagnet.js"></script>
-
-
-  
 
   <!-- LIGHTBOX MODAL (FULL-SCREEN VIEWER) -->
   <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-4 backdrop-blur-md select-none">
@@ -284,7 +288,7 @@
       updateLightbox();
     }
 
-    // Keyboard navigation (ESC, Left, Right)
+    // Keyboard navigation (ESC to close, Left/Right arrows to flip)
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (!lightbox.classList.contains('hidden')) {
