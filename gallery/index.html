@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -41,9 +40,12 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
 
     /* ============================================================
-       SLIM HORIZONTAL TOP BAR OVERRIDES FOR EMAIL OCTOPUS
-       Forces badge, input, and button onto one single compact line
+       RAZOR-THIN 40PX TOP BANNER OVERRIDES
+       Forces input and button into an ultra-compact single row
        ============================================================ */
+    aside, aside * {
+      box-sizing: border-box !important;
+    }
     aside .email-octopus-form-wrapper {
       background: transparent !important;
       padding: 0 !important;
@@ -52,86 +54,50 @@
       box-shadow: none !important;
       border: none !important;
     }
-
     aside .email-octopus-form {
       display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
-      flex-wrap: nowrap !important;
-      gap: 0.5rem !important;
+      gap: 6px !important;
       margin: 0 !important;
       padding: 0 !important;
     }
-
-    aside .email-octopus-form-row {
-      margin: 0 !important;
-      padding: 0 !important;
-      flex: 1 !important;
-    }
-
+    aside .email-octopus-form-row,
     aside .email-octopus-form-row-subscribe {
       margin: 0 !important;
       padding: 0 !important;
     }
-
-    /* Compact Input */
     aside input[type="email"],
     aside input[type="text"],
     aside .email-octopus-input {
+      height: 28px !important;
+      padding: 2px 8px !important;
+      font-size: 0.75rem !important;
       background-color: #130F23 !important;
       border: 1px solid #2A1F4D !important;
+      border-radius: 6px !important;
       color: #FFFFFF !important;
-      border-radius: 0.5rem !important;
-      padding: 0.35rem 0.75rem !important;
-      font-size: 0.8rem !important;
-      height: 34px !important;
-      min-width: 170px !important;
+      width: 150px !important;
       outline: none !important;
-      box-shadow: none !important;
     }
-
     aside input[type="email"]:focus {
       border-color: #A78BFA !important;
     }
-
-    /* Compact Button */
     aside button[type="submit"],
     aside input[type="submit"],
     aside .email-octopus-actions button {
+      height: 28px !important;
+      padding: 0 10px !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
       background: linear-gradient(135deg, #8B5CF6, #C084FC) !important;
       color: #FFFFFF !important;
-      font-weight: 700 !important;
-      font-size: 0.8rem !important;
-      height: 34px !important;
-      padding: 0 0.85rem !important;
-      border-radius: 0.5rem !important;
+      border-radius: 6px !important;
       border: none !important;
       cursor: pointer !important;
       white-space: nowrap !important;
     }
-
-    /* Move 'Powered by' inline to the left of the input */
-    aside .email-octopus-rewards {
-      margin: 0 !important;
-      padding: 0 0.35rem 0 0 !important;
-      font-size: 0.65rem !important;
-      color: #64748b !important;
-      white-space: nowrap !important;
-      order: -1 !important;
-      display: inline-flex !important;
-      align-items: center !important;
-    }
-
-    aside .email-octopus-rewards a {
-      color: #94a3b8 !important;
-      text-decoration: none !important;
-    }
-
-    aside .email-octopus-rewards a:hover {
-      color: #A78BFA !important;
-    }
-
-    /* Hide any leftover titles/subtitles inside widget */
+    aside .email-octopus-rewards,
     aside .email-octopus-form-wrapper h2,
     aside .email-octopus-form-wrapper p.email-octopus-subtitle,
     aside .email-octopus-form label {
@@ -141,18 +107,18 @@
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-  <!-- ULTRA-SLIM PERSISTENT TOP BANNER -->
-  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-4 py-1.5">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+  <!-- ULTRA-THIN PERSISTENT TOP BANNER (40px) -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/30 shadow-md px-3 h-10 flex items-center justify-between overflow-hidden">
+    <div class="max-w-6xl w-full mx-auto flex items-center justify-between gap-2">
       
       <!-- Compact Hook Text -->
-      <div class="flex items-center gap-2 text-xs md:text-sm text-slate-300">
-        <span class="font-bold text-white whitespace-nowrap">Free Novella:</span>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent font-semibold italic truncate">Taliah’s Poem</span>
+      <div class="flex items-center gap-1.5 text-xs text-slate-300 whitespace-nowrap">
+        <span class="font-bold text-white hidden sm:inline">Free Novella:</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent font-semibold italic">Taliah’s Poem</span>
       </div>
 
-      <!-- Single-Line EmailOctopus Embed -->
-      <div class="w-full md:w-auto flex items-center justify-center md:justify-end">
+      <!-- Single-Line Form Embed -->
+      <div class="flex items-center">
         <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
       </div>
 
@@ -211,7 +177,7 @@
   <script>
     const GITHUB_USER = 'AJCorynne';
     const GITHUB_REPO = 'ajcorynne';
-    const GALLERY_FOLDER = 'images/gallery';
+    const GALLERY_FOLDER = 'gallery/images';
 
     const BOOK_TITLES = {
       1: "GOD OF SKIES",
@@ -370,7 +336,7 @@
       updateLightbox();
     }
 
-    // Keyboard navigation (ESC to close, Left/Right arrows to flip)
+    // Keyboard navigation (ESC, Left, Right)
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (!lightbox.classList.contains('hidden')) {
