@@ -1,8 +1,9 @@
 // =========================================================================
-// SHARED NEWSLETTER AD COMPONENT (Edit this file to update both pages!)
+// SHARED LEAD MAGNET AD COMPONENT
+// Edit this file to update the blurb, cover, or form across the whole site!
 // =========================================================================
 
-const NEWSLETTER_CONFIG = {
+const LEAD_MAGNET_CONFIG = {
   badge: "Complimentary Sci-Fi Romance Novella",
   titlePrefix: "Claim Your Free Copy of ",
   bookTitle: "Taliah’s Poem",
@@ -11,7 +12,7 @@ const NEWSLETTER_CONFIG = {
   formId: "5e996bde-a4c1-11f1-8de1-71ba425265d3"
 };
 
-function renderNewsletterAd() {
+function renderLeadMagnet() {
   const container = document.getElementById('newsletter-ad-slot');
   if (!container) return;
 
@@ -26,20 +27,20 @@ function renderNewsletterAd() {
         <div class="md:col-span-5 flex justify-center">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-            <img src="${NEWSLETTER_CONFIG.coverImage}" alt="${NEWSLETTER_CONFIG.bookTitle}" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
+            <img src="${LEAD_MAGNET_CONFIG.coverImage}" alt="${LEAD_MAGNET_CONFIG.bookTitle}" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
           </div>
         </div>
 
         <!-- Pitch Copy & Email Form -->
         <div class="md:col-span-7 text-center md:text-left">
           <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            ${NEWSLETTER_CONFIG.badge}
+            ${LEAD_MAGNET_CONFIG.badge}
           </span>
           <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            ${NEWSLETTER_CONFIG.titlePrefix}<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">${NEWSLETTER_CONFIG.bookTitle}</span>
+            ${LEAD_MAGNET_CONFIG.titlePrefix}<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">${LEAD_MAGNET_CONFIG.bookTitle}</span>
           </h2>
           <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
-            ${NEWSLETTER_CONFIG.blurb}
+            ${LEAD_MAGNET_CONFIG.blurb}
           </p>
 
           <!-- EmailOctopus Container -->
@@ -50,17 +51,17 @@ function renderNewsletterAd() {
     </section>
   `;
 
-  // Dynamically load EmailOctopus script
+  // Dynamically load EmailOctopus form
   const eoScript = document.createElement('script');
   eoScript.async = true;
-  eoScript.src = `https://eocampaign1.com/form/${NEWSLETTER_CONFIG.formId}.js`;
-  eoScript.setAttribute('data-form', NEWSLETTER_CONFIG.formId);
+  eoScript.src = `https://eocampaign1.com/form/${LEAD_MAGNET_CONFIG.formId}.js`;
+  eoScript.setAttribute('data-form', LEAD_MAGNET_CONFIG.formId);
   document.getElementById('eo-embed-container').appendChild(eoScript);
 }
 
 // Run on page load
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderNewsletterAd);
+  document.addEventListener('DOMContentLoaded', renderLeadMagnet);
 } else {
-  renderNewsletterAd();
+  renderLeadMagnet();
 }
