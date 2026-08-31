@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,31 +42,53 @@
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
-  <!-- HEADER -->
-  <header class="py-16 px-6 text-center border-b border-brand-border/40 relative">
+  <!-- PERSISTENT TOP EMAIL SIGN-UP BANNER -->
+  <aside class="fixed top-0 left-0 w-full z-40 bg-brand-card/95 backdrop-blur-md border-b border-brand-purple/40 shadow-2xl shadow-brand-purple/10 px-4 py-3">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      
+      <!-- Banner Hook -->
+      <div class="text-center md:text-left">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-neon bg-brand-purple/20 border border-brand-purple/40 px-2 py-0.5 rounded-full inline-block mb-1">
+          Exclusive Free Novella
+        </span>
+        <p class="text-xs md:text-sm font-semibold text-white">
+          Get <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">Taliah’s Poem</span> delivered to your inbox:
+        </p>
+      </div>
+
+      <!-- EmailOctopus Form Widget -->
+      <div class="w-full md:w-auto min-w-[280px] max-w-md">
+        <script async src="https://eocampaign1.com/form/5e996bde-a4c1-11f1-8de1-71ba425265d3.js" data-form="5e996bde-a4c1-11f1-8de1-71ba425265d3"></script>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- MAIN GALLERY HEADER (With top padding to clear sticky banner) -->
+  <header class="pt-36 pb-12 px-6 text-center border-b border-brand-border/40 relative">
     <div class="max-w-3xl mx-auto">
       <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1 rounded-full inline-block mb-3">
-        Reader Exclusive
+        Reader Archive
       </span>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">The Art Vault</h1>
-      <p class="text-slate-400 text-sm md:text-base mt-2">
-        Full-color, high-resolution original illustrations and concept art from the series. Click any image to expand.
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">The Art Vault</h1>
+      <p class="text-slate-400 text-sm md:text-base mt-3 max-w-xl mx-auto">
+        Full-color, high-resolution original illustrations and concept art. Click any image to view in full resolution.
       </p>
     </div>
   </header>
 
-  <!-- GALLERY CONTAINER -->
+  <!-- GALLERY SECTIONS CONTAINER -->
   <main class="max-w-6xl mx-auto px-6 py-12">
     <!-- Loading State -->
     <div id="loading" class="text-center py-20 text-slate-500 text-sm">
       Decrypting archive transmissions...
     </div>
 
-    <!-- The Dynamic Auto Grid -->
-    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 hidden"></div>
+    <!-- The Grouped Gallery Container -->
+    <div id="gallery-container" class="space-y-16 hidden"></div>
   </main>
 
-  <!-- LIGHTBOX MODAL (FULL SCREEN VIEWER) -->
+  <!-- LIGHTBOX MODAL (FULL-SCREEN VIEWER) -->
   <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-4 backdrop-blur-md select-none">
     
     <!-- Top Controls -->
@@ -90,13 +112,20 @@
     </div>
   </div>
 
-  <!-- AUTO-LOADER, PARSER & LIGHTBOX SCRIPT -->
+  <!-- AUTO-LOADER, BOOK GROUPER & LIGHTBOX SCRIPT -->
   <script>
     const GITHUB_USER = 'AJCorynne';
     const GITHUB_REPO = 'ajcorynne';
     const GALLERY_FOLDER = 'images/gallery';
 
-    let galleryItems = [];
+    // EDIT HERE: Add future book titles to this list as you write sequels!
+    const BOOK_TITLES = {
+      1: "GOD OF SKIES",
+      2: "NEBULA BOUND",
+      3: "ORBIT'S END"
+    };
+
+    let flatGalleryItems = [];
     let currentIndex = 0;
 
     async function loadGallery() {
@@ -112,21 +141,20 @@
           validExtensions.some(ext => file.name.toLowerCase().endsWith(ext))
         );
 
-        galleryItems = images.map(file => {
-          // Schema: BB_CCC_Title_Caption.ext (e.g. 01_042_nebula gate_concept art.jpg)
+        // Parse filename: BB_CCC_Title_Caption.ext
+        const parsedItems = images.map(file => {
           const nameWithoutExt = file.name.replace(/\.[^/.]+$/, "");
           const parts = nameWithoutExt.split('_');
 
-          // parseInt removes leading zeros for clean display ("01" -> 1, "042" -> 42)
           const bookNum = parseInt(parts[0], 10) || 0;
           const chapterNum = parseInt(parts[1], 10) || 0;
           const rawTitle = parts[2] || parts[0];
           const caption = parts[3] || "";
 
-          // Capitalize each word in the title
+          // Capitalize Title
           const title = rawTitle.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-          // Build clean metadata badge
+          // Clean Badge
           let badgeText = "";
           if (bookNum > 0 && chapterNum > 0) {
             badgeText = `Book ${bookNum} • Chapter ${chapterNum}`;
@@ -148,13 +176,14 @@
           };
         });
 
-        // Numeric chronological sort: Book first, then Chapter
-        galleryItems.sort((a, b) => {
+        // Numeric Sort: Books first, then Chapters
+        parsedItems.sort((a, b) => {
           if (a.bookNum !== b.bookNum) return a.bookNum - b.bookNum;
           return a.chapterNum - b.chapterNum;
         });
 
-        renderGrid();
+        flatGalleryItems = parsedItems;
+        renderGroupedGallery(parsedItems);
       } catch (err) {
         document.getElementById('loading').innerHTML = `
           <p class="text-slate-400">Vault currently offline or loading. Please check back shortly.</p>
@@ -162,28 +191,66 @@
       }
     }
 
-    function renderGrid() {
-      const grid = document.getElementById('gallery-grid');
+    function renderGroupedGallery(items) {
+      const container = document.getElementById('gallery-container');
       const loader = document.getElementById('loading');
-      
-      loader.classList.add('hidden');
-      grid.classList.remove('hidden');
 
-      if (galleryItems.length === 0) {
-        grid.innerHTML = '<p class="col-span-full text-center text-slate-500">No artwork uploaded to the vault yet.</p>';
+      loader.classList.add('hidden');
+      container.classList.remove('hidden');
+
+      if (items.length === 0) {
+        container.innerHTML = '<p class="text-center text-slate-500 py-12">No artwork uploaded to the vault yet.</p>';
         return;
       }
 
-      grid.innerHTML = galleryItems.map((item, index) => `
-        <div class="group relative cursor-pointer overflow-hidden rounded-xl bg-brand-card border border-brand-border/60 hover:border-brand-neon transition" onclick="openLightbox(${index})">
-          <img src="${item.src}" alt="${item.title}" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
-          <div class="p-3 bg-brand-card/90">
-            <span class="text-[10px] font-bold text-brand-neon tracking-wider uppercase block mb-0.5">${item.badge}</span>
-            <h3 class="text-xs font-bold text-white truncate">${item.title}</h3>
-            ${item.caption ? `<p class="text-[11px] text-slate-400 truncate mt-0.5">${item.caption}</p>` : ''}
-          </div>
-        </div>
-      `).join('');
+      // Group items by bookNum
+      const groups = {};
+      items.forEach(item => {
+        if (!groups[item.bookNum]) groups[item.bookNum] = [];
+        groups[item.bookNum].push(item);
+      });
+
+      let html = '';
+
+      // Render each book section with its own H1/H2 Header
+      Object.keys(groups).forEach(bookKey => {
+        const bNum = parseInt(bookKey, 10);
+        const bookTitle = BOOK_TITLES[bNum] || (bNum > 0 ? `Book ${bNum}` : "Bonus Art & Maps");
+        const headingText = bNum > 0 ? `Book ${bNum}: ${bookTitle}` : bookTitle;
+
+        html += `
+          <section class="book-section">
+            <!-- Book Intro Title -->
+            <div class="flex items-center gap-4 mb-6 border-b border-brand-border/60 pb-3">
+              <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                ${headingText}
+              </h2>
+              <span class="text-xs font-semibold text-brand-neon uppercase tracking-wider bg-brand-purple/10 border border-brand-purple/30 px-2.5 py-1 rounded-full">
+                ${groups[bNum].length} Illustrations
+              </span>
+            </div>
+
+            <!-- Thumbnail Grid for this Book -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              ${groups[bNum].map(item => {
+                const globalIndex = flatGalleryItems.indexOf(item);
+                return `
+                  <div class="group relative cursor-pointer overflow-hidden rounded-xl bg-brand-card border border-brand-border/60 hover:border-brand-neon transition" onclick="openLightbox(${globalIndex})">
+                    <img src="${item.src}" alt="${item.title}" class="w-full aspect-square object-cover group-hover:scale-105 transition duration-300">
+                    <div class="p-3 bg-brand-card/90">
+                      <span class="text-[10px] font-bold text-brand-neon tracking-wider uppercase block mb-0.5">${item.badge}</span>
+                      <h3 class="text-xs font-bold text-white truncate">${item.title}</h3>
+                      ${item.caption ? `<p class="text-[11px] text-slate-400 truncate mt-0.5">${item.caption}</p>` : ''}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </section>
+        `;
+      });
+
+      container.innerHTML = html;
     }
 
     function openLightbox(index) {
@@ -199,7 +266,7 @@
     }
 
     function updateLightbox() {
-      const item = galleryItems[currentIndex];
+      const item = flatGalleryItems[currentIndex];
       document.getElementById('lightbox-img').src = item.src;
       document.getElementById('lightbox-badge').textContent = item.badge;
       document.getElementById('lightbox-title').textContent = item.title;
@@ -207,16 +274,16 @@
     }
 
     function nextImage() {
-      currentIndex = (currentIndex + 1) % galleryItems.length;
+      currentIndex = (currentIndex + 1) % flatGalleryItems.length;
       updateLightbox();
     }
 
     function prevImage() {
-      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      currentIndex = (currentIndex - 1 + flatGalleryItems.length) % flatGalleryItems.length;
       updateLightbox();
     }
 
-    // Keyboard navigation (ESC to close, Left/Right arrows to flip)
+    // Keyboard navigation (ESC, Left, Right)
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (!lightbox.classList.contains('hidden')) {
