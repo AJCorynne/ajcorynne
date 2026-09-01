@@ -8,7 +8,7 @@ const LEAD_MAGNET_CONFIG = {
   titlePrefix: "Claim Your Free Copy of ",
   bookTitle: "Taliah’s Poem",
   blurb: "Stranded across enemy lines in the deepest reaches of uncharted space. An alliance formed in secrecy—and a dangerous attraction that could destroy both their worlds. Enter the saga now.",
-  coverImage: "/images/Skyreacher-1.5-Taliah's-Poem-book-cover.jpg"
+  coverImage: "/images/Skyreacher-1.5-Taliah's-Poem-book-cover.jpg",
   formId: "5e996bde-a4c1-11f1-8de1-71ba425265d3"
 };
 
