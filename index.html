@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJCorynne.com | Author of Romantic Space Opera Adventure Novels</title>
-  <meta name="description" content="A.J. Corynne's official author website. Sci-Fi Romance Author. Download Taliah's Poem for free.">
+  <meta name="description" content="A.J. Corynne’s official author website. Sci-Fi Romance Author. Download Taliah’s Poem for free.">
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">  
-
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">  
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -33,20 +32,24 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    p.justified {
+      text-align: justify;
+      text-justify: inter-word;
+    }
   </style>
 </head>
 <body class="bg-brand-bg text-slate-200 antialiased min-h-screen selection:bg-brand-purple selection:text-white">
 
   <!-- NAVIGATION -->
   <nav class="fixed top-0 w-full z-40 bg-brand-bg/80 backdrop-blur-md border-b border-brand-border/60">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="font-extrabold tracking-wider text-xl text-white">AJ<span class="text-brand-neon">CORYNNE</span></a>
       <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-        <a href="#books" class="hover:text-brand-neon transition">Books</a>
+        <a href="#books" class="hover:text-brand-neon transition">The Book</a>
         <a href="#reading-order" class="hover:text-brand-neon transition">Reading Order</a>
         <a href="#updates" class="hover:text-brand-neon transition">Updates</a>
         <a href="#about" class="hover:text-brand-neon transition">About</a>
@@ -57,71 +60,144 @@
     </div>
   </nav>
 
-
-  
-  <!-- HERO & NEWSLETTER SECTION --> /   <!-- SHARED LEAD MAGNET SECTION -->
-  <div id="newsletter-ad-slot"></div>
+  <!-- SHARED LEAD MAGNET HERO SECTION -->
+  <div id="newsletter-ad-slot" class="pt-16"></div>
   <script src="/newsletter/leadmagnet.js"></script>
 
-
-
-  
-  <!-- BOOKS SHOWCASE -->
+  <!-- FEATURED BOOK 1 SHOWCASE -->
   <section id="books" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/30">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-5xl mx-auto">
+      
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">The Books</h2>
-        <p class="text-slate-400 mt-2">Explore the complete sci-fi romance collection.</p>
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Skyreacher Series • Book 1
+        </span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">God of Skies</h2>
+        <p class="text-slate-400 text-sm md:text-base mt-2">The breakout romantic space opera adventure.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
-        <!-- Book Card 1 -->
-        <div class="bg-brand-card border border-brand-border/60 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-purple/50 transition">
-          <div>
-            <img src="https://placehold.co/600x900/130F23/A78BFA?text=Book+1+Cover" alt="Book 1" class="rounded-lg w-full aspect-[2/3] object-cover mb-6 border border-brand-border/40">
-            <span class="text-xs font-semibold text-brand-neon">Book 1</span>
-            <h3 class="text-xl font-bold text-white mt-1">Starlight Velocity</h3>
-            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-              A rogue pilot on the outer rim finds herself stranded with an enemy commander who holds the key to her past.
-            </p>
+        <!-- Left: Sticky Book Cover & Primary CTA -->
+        <div class="lg:col-span-5 flex flex-col items-center lg:sticky lg:top-24">
+          <div class="relative group w-full max-w-sm">
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+            <img 
+              src="/images/Skyreacher-1-God-of-Skies-book-cover.jpg" 
+              alt="God of Skies Book Cover by A.J. Corynne" 
+              class="relative rounded-xl w-full shadow-2xl border border-brand-border/80 object-cover"
+            >
           </div>
-          <div class="mt-6 pt-4 border-t border-brand-border/40 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Available on Kindle Unlimited</span>
-            <a href="#" class="text-xs font-bold uppercase tracking-wider text-brand-accent hover:text-white transition">Buy Now &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Book Card 2 -->
-        <div class="bg-brand-card border border-brand-border/60 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-purple/50 transition">
-          <div>
-            <img src="https://placehold.co/600x900/130F23/A78BFA?text=Book+2+Cover" alt="Book 2" class="rounded-lg w-full aspect-[2/3] object-cover mb-6 border border-brand-border/40">
-            <span class="text-xs font-semibold text-brand-neon">Book 2</span>
-            <h3 class="text-xl font-bold text-white mt-1">Nebula Bound</h3>
-            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-              Bound by honor and hunted by the fleet, two reluctant allies must cross a fractured galaxy to save their world.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-brand-border/40 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Available on Kindle Unlimited</span>
-            <a href="#" class="text-xs font-bold uppercase tracking-wider text-brand-accent hover:text-white transition">Buy Now &rarr;</a>
+          
+          <div class="w-full max-w-sm mt-6 flex flex-col gap-3 text-center">
+            <a 
+              href="https://sky1.ajcorynne.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full bg-gradient-to-r from-brand-purple via-violet-600 to-brand-accent hover:opacity-95 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition shadow-xl shadow-brand-purple/30 tracking-wide uppercase"
+            >
+              Buy Now &rarr;
+            </a>
+            <span class="text-xs text-slate-400 font-medium">Available on Kindle, Paperback &amp; Kindle Unlimited</span>
           </div>
         </div>
 
-        <!-- Book Card 3 -->
-        <div class="bg-brand-card border border-brand-border/60 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-purple/50 transition">
-          <div>
-            <img src="https://placehold.co/600x900/130F23/A78BFA?text=Book+3+Cover" alt="Book 3" class="rounded-lg w-full aspect-[2/3] object-cover mb-6 border border-brand-border/40">
-            <span class="text-xs font-semibold text-brand-neon">Book 3</span>
-            <h3 class="text-xl font-bold text-white mt-1">Orbit's End</h3>
-            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-              The explosive conclusion to the trilogy. Love, warfare, and destiny collide at the center of the station.
-            </p>
+        <!-- Right: Blurb, Praise & Reviews -->
+        <div class="lg:col-span-7 bg-brand-card/70 border border-brand-border/60 rounded-2xl p-6 sm:p-8 space-y-6">
+          
+          <!-- Editorial Review Callout -->
+          <div class="border-l-2 border-brand-accent pl-4 py-1.5 bg-brand-purple/10 rounded-r-lg">
+            <blockquote class="text-base sm:text-lg font-bold text-slate-100 italic">
+              “A slam-bang, can’t-put-it-down thriller!”
+            </blockquote>
+            <cite class="block text-xs uppercase tracking-widest text-brand-neon font-semibold mt-1">
+              —William C. Dietz, New York Times Bestseller
+            </cite>
           </div>
-          <div class="mt-6 pt-4 border-t border-brand-border/40 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Available on Kindle Unlimited</span>
-            <a href="#" class="text-xs font-bold uppercase tracking-wider text-brand-accent hover:text-white transition">Buy Now &rarr;</a>
+
+          <div class="text-center text-brand-purple/60 text-lg tracking-widest select-none">
+            * * *
           </div>
+
+          <!-- Synopsis Body -->
+          <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p class="justified">My blood drips into the neon gutters. I never expected to die on this planet.</p>
+            <p class="justified">The dark red trickles down my arm, pooling on the grip of my blaster.</p>
+            <p class="justified">I was hired to watch: Shadow her, report to her father, then vanish like a ghost—</p>
+            <p class="justified">The whole mission a secret.</p>
+            <p class="justified">But in the rain-soaked alleys beneath the old maglev tracks, the Censors appeared. One flash of a pulse rifle, one split-second choice, and now two bodies bleed out in the gutter behind us.</p>
+            <p class="justified">Now I’m running from the authorities with Taliah Taiberos—the senator’s daughter.</p>
+            <p class="justified">She was never supposed to know I existed. A girl with wildfire hair and rebellion in her eyes. I can’t deny the attraction I feel. Her hand is in mine, and every step we take together could be our last.</p>
+            <p class="justified">Taliah wants to destroy her father’s empire.</p>
+            <p class="justified">I just want to survive.</p>
+            <p class="justified">Stop the bleeding. Or I’m going to be the next corpse face-down in the gutter.</p>
+            <p class="justified">The city is a labyrinth, and every shadow hides a hunter—their mirror visors dotted with rain. With every heartbeat, I feel the net tightening. I’m no longer a bystander. I’m implicated.</p>
+            <p class="justified">I’ve touched the secret. Been tainted by it.</p>
+            <p class="justified">And on a planet where censorship rules…</p>
+            <p class="font-semibold text-white justified">Secrets get buried.</p>
+          </div>
+
+          <div class="text-center text-brand-purple/60 text-lg tracking-widest select-none pt-2">
+            * * *
+          </div>
+
+          <!-- Reader Reviews Grid / List -->
+          <div class="space-y-3 pt-2">
+            <h4 class="text-xs uppercase font-extrabold tracking-widest text-brand-neon mb-4">What Readers Are Saying</h4>
+            
+            <div class="space-y-3">
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“It’s Star Wars with sex, and it’s really good!” <span class="text-slate-400 font-normal">—Mara J.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“Character-driven, emotionally intimate, sexy SF!” <span class="text-slate-400 font-normal">—Reyla R.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“It’s Red Rising but with a tragic, star-crossed romance at its heart.” <span class="text-slate-400 font-normal">—Britney V.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“Galactic intrigue, spicy romance, deplorable villains, and an irresistible hero.” <span class="text-slate-400 font-normal">—James W.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“Finally a space opera with a smart MC!” <span class="text-slate-400 font-normal">—Chloe P.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“If you think Star Wars took a wrong turn, drop everything and read this!” <span class="text-slate-400 font-normal">—Tessa B.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“A space adventure with a smart hero and a real emotional core.” <span class="text-slate-400 font-normal">—John B.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“Smart political science fiction about abuse victims struggling to survive.” <span class="text-slate-400 font-normal">—Devon H.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“Grimdark Star Wars? Yeah, kinda. It’s dark, gritty, hardish scifi that doesn’t pull its punches. I like.” <span class="text-slate-400 font-normal">—Paul K.</span></p>
+              </div>
+
+              <div class="bg-brand-bg/60 border border-brand-border/40 rounded-xl p-3.5 text-xs sm:text-sm text-slate-300">
+                <span class="text-amber-400 font-bold block mb-1">★★★★★</span>
+                <p class="justified">“I’d call it science-fantasy, romance-infused. A fated mates trope with a grumpy and guarded protector hero and a competent, clever heroine. Just what I wanted.” <span class="text-slate-400 font-normal">—Jana W.</span></p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -130,107 +206,206 @@
 
   <!-- READING ORDER & WHERE TO START -->
   <section id="reading-order" class="py-20 px-6 border-t border-brand-border/40">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">Where to Start</h2>
-        <p class="text-slate-400 mt-2">New here? Here is the suggested chronological reading order.</p>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Reading Order</h2>
+        <p class="text-slate-400 mt-2 text-sm">Suggested reading order for the complete Skyreacher series.</p>
       </div>
 
       <div class="space-y-4">
-        <!-- Prequel -->
-        <div class="bg-brand-card/60 border border-brand-purple/40 rounded-xl p-5 flex items-center gap-4">
-          <span class="w-8 h-8 rounded-full bg-brand-purple/20 text-brand-neon flex items-center justify-center font-bold text-sm">0</span>
-          <div class="flex-1">
-            <h4 class="text-white font-semibold">Taliah’s Poem <span class="text-xs text-brand-neon ml-2 font-normal">(Free Novella / Prequel)</span></h4>
-            <p class="text-xs text-slate-400 mt-0.5">Best read first or after Book 1 as a standalone companion.</p>
+        
+        <!-- Book 1 -->
+        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-red-500/40 transition">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-sm shrink-0 border" style="background-color: #58151c; border-color: #9b2226; color: #fca5a5;">
+              1
+            </span>
+            <div class="min-w-0">
+              <h4 class="text-white font-bold text-base">God of Skies <span class="text-xs font-normal text-slate-400 ml-2">(Released Nov 5, 2026)</span></h4>
+              <p class="text-xs text-slate-400 mt-0.5">Skyreacher Book 1 • A rogue pilot and a senator’s rebellious daughter plunge into a high-stakes, forbidden galactic conspiracy.</p>
+            </div>
           </div>
-          <a href="#newsletter" class="text-xs text-brand-neon font-bold hover:underline">Get Free</a>
+          <a 
+            href="https://sky1.ajcorynne.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-36 text-center text-xs font-bold uppercase tracking-wider text-red-400 hover:text-red-300 border border-red-500/30 bg-red-950/40 py-2.5 px-4 rounded-lg transition shrink-0"
+          >
+            Buy Now &rarr;
+          </a>
         </div>
 
-        <!-- Book 1 -->
-        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
-          <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">1</span>
-          <div class="flex-1">
-            <h4 class="text-white font-semibold">Starlight Velocity</h4>
-            <p class="text-xs text-slate-400 mt-0.5">Main series entry point.</p>
+        <!-- Book 1.5 -->
+        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-amber-500/40 transition">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-xs shrink-0 border" style="background-color: #5c2409; border-color: #b45309; color: #fed7aa;">
+              1.5
+            </span>
+            <div class="min-w-0">
+              <h4 class="text-white font-bold text-base">Taliah’s Poem <span class="text-xs font-normal text-amber-400/90 ml-2">(Novella)</span></h4>
+              <p class="text-xs text-slate-400 mt-0.5">Parallel timeline to Book 1 • Taliah’s untold perspective • Free for subscribers only.</p>
+            </div>
           </div>
-          <a href="#" class="text-xs text-slate-400 hover:text-white font-bold">Amazon</a>
+          <a 
+            href="#newsletter" 
+            class="w-full sm:w-36 text-center text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 border border-amber-500/30 bg-amber-950/40 py-2.5 px-4 rounded-lg transition shrink-0"
+          >
+            Get Free &uarr;
+          </a>
         </div>
 
         <!-- Book 2 -->
-        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
-          <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">2</span>
-          <div class="flex-1">
-            <h4 class="text-white font-semibold">Nebula Bound</h4>
-            <p class="text-xs text-slate-400 mt-0.5">Book 2.</p>
+        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-blue-500/40 transition">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-sm shrink-0 border" style="background-color: #172554; border-color: #2563eb; color: #bfdbfe;">
+              2
+            </span>
+            <div class="min-w-0">
+              <h4 class="text-white font-bold text-base">Queen of Songs <span class="text-xs font-normal text-blue-400 ml-2">(Coming Soon)</span></h4>
+              <p class="text-xs text-slate-400 mt-0.5">Skyreacher Book 2 • The survival epic deepens across fractured star systems.</p>
+            </div>
           </div>
-          <a href="#" class="text-xs text-slate-400 hover:text-white font-bold">Amazon</a>
-        </div>
-
-        <!-- Book 3 -->
-        <div class="bg-brand-card/60 border border-brand-border/60 rounded-xl p-5 flex items-center gap-4">
-          <span class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-sm">3</span>
-          <div class="flex-1">
-            <h4 class="text-white font-semibold">Orbit's End</h4>
-            <p class="text-xs text-slate-400 mt-0.5">Book 3 (Series Finale).</p>
-          </div>
-          <a href="#" class="text-xs text-slate-400 hover:text-white font-bold">Amazon</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERIES DISPATCH / UPDATES -->
-  <section id="updates" class="py-16 px-6 border-t border-brand-border/40 bg-brand-card/20">
-    <div class="max-w-3xl mx-auto text-center">
-      <span class="text-xs uppercase font-bold tracking-widest text-brand-neon">Current Status</span>
-      <h2 class="text-2xl font-bold text-white mt-1 mb-4">Series Dispatch</h2>
-      <div class="bg-brand-card border border-brand-border p-6 rounded-2xl text-left">
-        <div class="flex justify-between items-center text-xs text-slate-500 mb-2">
-          <span>STATUS REPORT</span>
-          <span>AUTUMN 2025</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed">
-          <!-- EDIT HERE: Series status text -->
-          Drafting on the upcoming spin-off series is currently underway. Newsletter subscribers will receive the first chapter preview and cover reveal next month!
-        </p>
-      </div>
-    </div>
-  </section>
-  
-
- <!-- ABOUT THE AUTHOR & CONTACT -->
-  <section id="about" class="py-20 px-6 border-t border-brand-border/40">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-      <div class="flex justify-center">
-        
-        <!-- AUTHOR HEADSHOT IN CIRCLE -->
-        <img 
-          src="images/AJ-Corynne-scifi-space-opera-Author-Portrait.jpg" 
-          alt="A.J. Corynne headshot" 
-          class="w-48 h-48 rounded-full object-cover border-2 border-brand-purple/40 shadow-xl"
-        >
-
-      </div>
-      <div class="md:col-span-2 text-center md:text-left">
-        <h2 class="text-2xl font-bold text-white mb-3">About the Author</h2>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          A.J. Corynne writes character-driven adventure novels with high-stakes plots, wondrous settings, and spicy romantic chemistry. And since you made it past that first sentence, I’ll let you in on a little secret. A.J. Corynne isn't my real name. And we're actually two people, a secret dual-author collab. Why secret? Well—and this is where it gets real—one of us helped rescue a child from abuse and suffered ongoing repercussions for it. The pseudonym helps protect the innocent from further harm. And yet you’ll find that our genuine personalities shine right through the Zorro mask, represented in clues by a few of our favorite things: (1) a minimalist leather wallet about half a centimeter thick, (2) an orange-crayon tiger drawing from a first-grader, (3) a clacky Keychron keyboard with a red escape key, (4) a wooden cup of the carpenter that sits on a shelf right back there, (5) a packet of kale seedlings waiting for spring, and (6) a worn out copy of <i>Pride and Prejudice</i> that might in fact be stolen. 
-        </p>
-        <div>
-          <a href="mailto:hello@ajcorynne.com" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-neon hover:text-brand-accent transition">
-            <span>✉ hello@ajcorynne.com</span>
+          <a 
+            href="https://sky2.ajcorynne.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-36 text-center text-xs font-bold uppercase tracking-wider text-blue-400 hover:text-blue-300 border border-blue-500/30 bg-blue-950/40 py-2.5 px-4 rounded-lg transition shrink-0"
+          >
+            Pre-Order &rarr;
           </a>
         </div>
+
+        <!-- Book 3 (Emerald Green Companion) -->
+        <div class="bg-brand-card/40 border border-brand-border/40 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 opacity-85">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-sm shrink-0 border" style="background-color: #064e3b; border-color: #059669; color: #6ee7b7;">
+              3
+            </span>
+            <div class="min-w-0">
+              <h4 class="text-slate-300 font-bold text-base">Child of Fates</h4>
+              <p class="text-xs text-slate-500 mt-0.5">Skyreacher Book 3.</p>
+            </div>
+          </div>
+          <span class="w-full sm:w-36 text-center text-xs font-semibold uppercase tracking-wider text-slate-500 border border-slate-800 bg-slate-900/40 py-2.5 px-4 rounded-lg shrink-0">
+            TBA
+          </span>
+        </div>
+
+        <!-- Book 4 (Nebula Purple Companion) -->
+        <div class="bg-brand-card/40 border border-brand-border/40 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 opacity-85">
+          <div class="flex items-center gap-4 min-w-0">
+            <span class="w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-sm shrink-0 border" style="background-color: #3b0764; border-color: #9333ea; color: #e9d5ff;">
+              4
+            </span>
+            <div class="min-w-0">
+              <h4 class="text-slate-300 font-bold text-base">Lord of Ashes</h4>
+              <p class="text-xs text-slate-500 mt-0.5">Skyreacher Book 4.</p>
+            </div>
+          </div>
+          <span class="w-full sm:w-36 text-center text-xs font-semibold uppercase tracking-wider text-slate-500 border border-slate-800 bg-slate-900/40 py-2.5 px-4 rounded-lg shrink-0">
+            TBA
+          </span>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- RECENT UPDATES -->
+  <section id="updates" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Recent Updates</h2>
+      </div>
 
+      <div class="bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+        <div class="flex items-center gap-3.5 mb-6 pb-4 border-b border-brand-border/40">
+          <!-- Glowing Pulse Icon Graphic -->
+          <div class="w-10 h-10 rounded-xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center shrink-0 text-brand-neon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Author Transmission</h3>
+            <p class="text-xs text-slate-400">Direct dispatch from the writing desk</p>
+          </div>
+        </div>
+
+        <blockquote class="text-slate-200 text-sm sm:text-base leading-relaxed italic justified">
+          “I’ve finished a complete draft of Skyreacher book 2. I’m in the throes of revision, which is challenging and rewarding. I’m also revising my romantasy quest novel, which I’m very excited to share with you soon. Hoping for a spring 2027 release for the romantasy and fall 2027 release for Queen of Songs. But, as always, I want to deliver a story you love, and that often takes longer than expected.”
+        </blockquote>
+
+        <div class="mt-6 pt-4 border-t border-brand-border/30 flex justify-between items-center text-xs">
+          <span class="text-brand-accent tracking-wider font-extrabold text-sm">—AJ</span>
+          <span class="text-slate-500 font-mono">Sep 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE AUTHOR & CONTACT -->
+  <section id="about" class="py-20 px-6 border-t border-brand-border/40">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Symmetrical Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">About the Author</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <!-- Enlarged Author Headshot -->
+        <div class="md:col-span-5 flex justify-center">
+          <img 
+            src="images/AJ-Corynne-scifi-space-opera-Author-Portrait.jpg" 
+            alt="A.J. Corynne headshot" 
+            class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover border-2 border-brand-purple/40 shadow-2xl"
+          >
+        </div>
+
+        <!-- Bio Content with Clean List & Conclusion -->
+        <div class="md:col-span-7 space-y-4">
+          <p class="text-slate-300 text-sm leading-relaxed justified">
+            A.J. Corynne writes character-driven adventures with high-stakes plots, wondrous settings, and spicy romantic chemistry.
+          </p>
+
+          <p class="text-slate-300 text-sm leading-relaxed justified">
+            And since you made it past that first sentence, I’ll let you in on a little secret. A.J. Corynne isn’t my real name. And we’re actually two people, a secret dual-author collab. Why secret? Well—and this is where it gets real—one of us helped rescue a child from abuse and suffered ongoing repercussions for it. The pseudonym helps protect the innocent from further harm.
+          </p>
+
+          <p class="text-slate-300 text-sm leading-relaxed justified">
+            But you’ll find that our personalities shine right through the Zorro mask, represented in clues by a few of our favorite things:
+          </p>
+
+          <ol class="list-decimal list-inside space-y-1 text-slate-300 text-sm pl-2 leading-relaxed">
+            <li>A minimalist leather wallet about half a centimeter thick</li>
+            <li>An orange-crayon tiger drawing from a first-grader</li>
+            <li>A clacky Keychron keyboard with a red escape key</li>
+            <li>A wooden cup of the carpenter that sits on a shelf right back there</li>
+            <li>A packet of kale seedlings waiting for spring</li>
+            <li>A worn out copy of <i>Pride and Prejudice</i> that might in fact be stolen</li>
+          </ol>
+
+          <p class="text-slate-300 text-sm leading-relaxed pt-1 justified">
+            I’m glad you’re here. We have some exciting things ahead.
+          </p>
+
+          <div class="pt-2">
+            <a href="mailto:hello@ajcorynne.com" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-neon hover:text-brand-accent transition">
+              <span>✉ hello@ajcorynne.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="py-8 px-6 border-t border-brand-border/40 text-center text-xs text-slate-600">
-    <p>&copy; <span id="year"></span> A.J. Corynne. All rights reserved.</p>
+    <div class="max-w-5xl mx-auto">
+      <p>&copy; <span id="year"></span> A.J. Corynne. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
