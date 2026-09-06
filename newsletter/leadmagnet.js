@@ -4,13 +4,18 @@
 // =========================================================================
 
 const LEAD_MAGNET_CONFIG = {
-  badge: "Complimentary Sci-Fi Romance Novella",
-  titlePrefix: "Claim Your ",
-  bookTitle: "Free Copy",
-  blurb: "In GOD OF SKIES, Taliah's perspective is kept mysterious, but in her novella, TALIAH'S POEM, which runs in a parallel timeline to book 1, she exposes all her secrets. <br />After her closest confidant vanishes, Taliah is left stranded on a planet where the political walls are closing in, forcing her simultaneously into a secret alliance and a dangerous attraction, both of which could turn on her fast.",
+  subtitle: "Complimentary Sci-Fi Romance Novella",
+  headline: "Claim Your Free Copy",
+  blurb: `
+    <p class="mb-3">In GOD OF SKIES, Taliah's perspective is kept mysterious.</p>
+    <p>But in her novella, TALIAH'S POEM, which runs in a parallel timeline to book 1, she exposes all her secrets.</p>
+    <p>After her closest confidant vanishes, Taliah is left stranded on a planet where the political walls are closing in, forcing her simultaneously into a secret alliance and a dangerous attraction, both of which could turn on her fast.</p>
+  `,
   coverImage: "/images/Skyreacher-1.5-Taliah's-Poem-book-cover.jpg",
   formId: "5e996bde-a4c1-11f1-8de1-71ba425265d3"
 };
+
+
 
 function renderLeadMagnet() {
   const container = document.getElementById('newsletter-ad-slot');
@@ -27,19 +32,19 @@ function renderLeadMagnet() {
         <div class="md:col-span-5 flex justify-center">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-accent rounded-2xl blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
-            <img src="${LEAD_MAGNET_CONFIG.coverImage}" alt="${LEAD_MAGNET_CONFIG.bookTitle}" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
+            <img src="${LEAD_MAGNET_CONFIG.coverImage}" alt="Taliah's Poem Book Cover" class="relative rounded-xl w-64 md:w-80 shadow-2xl border border-brand-border/80">
           </div>
         </div>
 
         <!-- Pitch Copy & Email Form -->
         <div class="md:col-span-7 text-center md:text-left">
-          <span class="text-xs font-bold tracking-widest uppercase text-brand-neon bg-brand-purple/10 border border-brand-purple/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
-            ${LEAD_MAGNET_CONFIG.badge}
-          </span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            ${LEAD_MAGNET_CONFIG.titlePrefix}<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent">${LEAD_MAGNET_CONFIG.bookTitle}</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-2">
+            ${LEAD_MAGNET_CONFIG.headline}
           </h2>
-          <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
+          <p class="text-xs sm:text-sm font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent mb-4">
+            ${LEAD_MAGNET_CONFIG.subtitle}
+          </p>
+          <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed justified">
             ${LEAD_MAGNET_CONFIG.blurb}
           </p>
 
