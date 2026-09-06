@@ -98,7 +98,7 @@
             >
               Buy Now &rarr;
             </a>
-            <span class="text-xs text-slate-400 font-medium">Available on Kindle, Paperback &amp; Kindle Unlimited</span>
+            <span class="text-xs text-slate-400 font-medium">Available on Kindle, Kindle Unlimited, Paperback</span>
           </div>
         </div>
 
@@ -121,13 +121,14 @@
 
           <!-- Synopsis Body -->
           <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            <p class="justified">My blood drips into the neon gutters. I never expected to die on this planet.</p>
+            <p class="justified">My blood drips into the neon gutters.</p>
+            <p class="justified"><strong class="text-white font-bold">I never expected to die on this planet.</strong></p>
             <p class="justified">The dark red trickles down my arm, pooling on the grip of my blaster.</p>
             <p class="justified">I was hired to watch: Shadow her, report to her father, then vanish like a ghost—</p>
             <p class="justified">The whole mission a secret.</p>
             <p class="justified">But in the rain-soaked alleys beneath the old maglev tracks, the Censors appeared. One flash of a pulse rifle, one split-second choice, and now two bodies bleed out in the gutter behind us.</p>
             <p class="justified">Now I’m running from the authorities with Taliah Taiberos—the senator’s daughter.</p>
-            <p class="justified">She was never supposed to know I existed. A girl with wildfire hair and rebellion in her eyes. I can’t deny the attraction I feel. Her hand is in mine, and every step we take together could be our last.</p>
+            <p class="justified">She was never supposed to know I existed. A girl with wildfire hair and rebellion in her eyes. <strong class="text-white font-bold">I can’t deny the attraction I feel.</strong> Her hand is in mine, and every step we take together could be our last.</p>
             <p class="justified">Taliah wants to destroy her father’s empire.</p>
             <p class="justified">I just want to survive.</p>
             <p class="justified">Stop the bleeding. Or I’m going to be the next corpse face-down in the gutter.</p>
@@ -311,34 +312,36 @@
     </div>
   </section>
 
-  <!-- RECENT UPDATES (With Comfortable Reading Width) -->
+  <!-- RECENT UPDATES (STARSHIP COMMAND DECK HUD) -->
   <section id="updates" class="py-20 px-6 border-t border-brand-border/40 bg-brand-card/20">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-extrabold text-white tracking-tight">Recent Updates</h2>
       </div>
 
-      <div class="bg-brand-card border border-brand-border px-6 sm:px-12 lg:px-20 py-8 rounded-2xl relative overflow-hidden">
-        <div class="flex items-center gap-3.5 mb-6 pb-4 border-b border-brand-border/40">
-          <!-- Glowing Pulse Icon Graphic -->
-          <div class="w-10 h-10 rounded-xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center shrink-0 text-brand-neon">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+      <!-- Sci-Fi Comms Console Box -->
+      <div class="bg-brand-card/90 border border-brand-purple/40 px-6 sm:px-12 lg:px-16 py-8 rounded-2xl relative overflow-hidden shadow-2xl shadow-brand-purple/10">
+        
+        <!-- Starship Terminal Header -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-brand-border/60 text-[11px] font-mono tracking-wider">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="font-bold">INCOMING TRANSMISSION // DECODED</span>
           </div>
-          <div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Author Transmission</h3>
-            <p class="text-xs text-slate-400">Direct dispatch from the writing desk</p>
+          <div class="text-slate-500 flex items-center gap-3">
+            <span>SEC: LVL-4</span>
+            <span>ORIGIN: STARSHIP BRIDGE</span>
           </div>
         </div>
 
+        <!-- Transmission Message Body -->
         <blockquote class="text-slate-200 text-sm sm:text-base leading-relaxed italic justified">
           “I’ve finished a complete draft of Skyreacher book 2. I’m in the throes of revision, which is challenging and rewarding. I’m also revising my romantasy quest novel, which I’m very excited to share with you soon. Hoping for a spring 2027 release for the romantasy and fall 2027 release for Queen of Songs. But, as always, I want to deliver a story you love, and that often takes longer than expected.”
         </blockquote>
 
-        <div class="mt-6 pt-4 border-t border-brand-border/30 flex justify-between items-center text-xs">
-          <span class="text-brand-accent tracking-wider font-extrabold text-sm">—AJ</span>
-          <span class="text-slate-500 font-mono">Sep 2026</span>
+        <!-- Footer Sign-off (Date next to --AJ) -->
+        <div class="mt-6 pt-4 border-t border-brand-border/30 flex justify-end items-center">
+          <span class="text-brand-accent tracking-wider font-extrabold text-sm font-mono">—AJ, Sep 2026</span>
         </div>
       </div>
     </div>
@@ -354,12 +357,12 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <!-- Enlarged Author Headshot -->
+        <!-- Extra-Large Author Headshot -->
         <div class="md:col-span-5 flex justify-center">
           <img 
             src="images/AJ-Corynne-scifi-space-opera-Author-Portrait.jpg" 
             alt="A.J. Corynne headshot" 
-            class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover border-2 border-brand-purple/40 shadow-2xl"
+            class="w-72 h-72 sm:w-80 sm:h-80 rounded-full object-cover border-2 border-brand-purple/40 shadow-2xl"
           >
         </div>
 
