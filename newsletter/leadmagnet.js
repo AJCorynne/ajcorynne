@@ -4,12 +4,12 @@
 // =========================================================================
 
 const LEAD_MAGNET_CONFIG = {
-  subtitle: "Complimentary Sci-Fi Romance Novella",
   headline: "Claim Your Free Copy",
+  subtitle: "Complimentary Sci-Fi Romance Novella",
   blurb: `
     <p class="mb-3">In GOD OF SKIES, Taliah's perspective is kept mysterious.</p>
-    <p>But in her novella, TALIAH'S POEM, which runs in a parallel timeline to book 1, she exposes all her secrets.</p>
-    <p>After her closest confidant vanishes, Taliah is left stranded on a planet where the political walls are closing in, forcing her simultaneously into a secret alliance and a dangerous attraction, both of which could turn on her fast.</p>
+    <p class="mb-3">But in her novella, TALIAH'S POEM, which runs in a parallel timeline to book 1, she exposes all her secrets.</p>
+    <p class="mb-3">After her closest confidant vanishes, Taliah is left stranded on a planet where the political walls are closing in, forcing her simultaneously into a secret alliance and a dangerous attraction, both of which could turn on her fast.</p>
   `,
   coverImage: "/images/Skyreacher-1.5-Taliah's-Poem-book-cover.jpg",
   formId: "5e996bde-a4c1-11f1-8de1-71ba425265d3"
