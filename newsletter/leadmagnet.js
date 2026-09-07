@@ -37,7 +37,7 @@ function renderLeadMagnet() {
         </div>
 
         <!-- Pitch Copy & Email Form -->
-        <div class="md:col-span-7 text-center md:text-left">
+        <div class="md:col-span-7 text-left">
           <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-2">
             ${LEAD_MAGNET_CONFIG.headline}
           </h2>
@@ -49,7 +49,7 @@ function renderLeadMagnet() {
           </p>
 
           <!-- EmailOctopus Container -->
-          <div id="eo-embed-container" class="max-w-md mx-auto md:mx-0"></div>
+          <div id="eo-embed-container" class="max-w-md"></div>
         </div>
 
       </div>
