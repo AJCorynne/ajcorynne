@@ -4,7 +4,7 @@
 // =========================================================================
 
 const LEAD_MAGNET_CONFIG = {
-  headline: "Claim Your Free Copy",
+  headline: "Claim Your Free Book",
   subtitle: "Complimentary Sci-Fi Romance Novella",
   blurb: `
     <p class="mb-3">In GOD OF SKIES, Taliah's perspective is kept mysterious.</p>
