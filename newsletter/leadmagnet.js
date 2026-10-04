@@ -5,7 +5,7 @@
 
 const LEAD_MAGNET_CONFIG = {
   headline: "Claim Your Free Book",
-  subtitle: "Complimentary Sci-Fi Romance Novella",
+  subtitle: "Exclusive Sci-Fi Romance Novella",
   blurb: `
     <p class="mb-3">In GOD OF SKIES, Taliah's perspective is kept mysterious.</p>
     <p class="mb-3">But in her novella, TALIAH'S POEM, which runs in a parallel timeline, she exposes all her secrets.</p>
