@@ -4,7 +4,7 @@
 // =========================================================================
 
 const LEAD_MAGNET_CONFIG = {
-  headline: "QUEEN OF SONGS COMING SOON!",
+  headline: "QUEEN OF SONGS coming soon!",
   subtitle: "Be the first to be notified AND GET A FREE NOVELLA!",
   blurb: `
     <p class="mb-3">In GOD OF SKIES, Taliah's perspective is kept mysterious.</p>
