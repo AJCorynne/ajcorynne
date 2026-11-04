@@ -44,7 +44,7 @@ function renderLeadMagnet() {
           <p class="text-xs sm:text-sm font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent mb-4">
             ${LEAD_MAGNET_CONFIG.subtitle}
           </p>
-          <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed justified">
+          <p class="text-sm sm:text-base md:text-lg font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-brand-accent mb-4">
             ${LEAD_MAGNET_CONFIG.blurb}
           </p>
 
